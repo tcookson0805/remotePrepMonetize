@@ -6,6 +6,11 @@ img {
 	border: 3px solid;
 }
 
+#footer {
+	background-color: #EBEBEB;
+	padding: 2px;
+}
+
 #book1 {
 	margin: 10px auto;
 	padding: 10px 0px;
@@ -17,6 +22,14 @@ img {
 	padding: 10px 0px;
 }
 
+#album1 {
+
+}
+
+#album2 {
+
+}
+
 #headfirst {
 
 }
@@ -25,7 +38,19 @@ img {
 
 }
 
+#loveSongsdrugSongs {
+
+}
+
+#talkingIshard {
+	
+}
+
 .book_product {
+
+}
+
+.album_product {
 
 }
 
@@ -55,4 +80,14 @@ img {
 
 .important {
 	font-weight: bold;
+}
+
+.footerbox {
+	text-align: center;
+}
+
+.footerbox_mid {
+	text-align: center;
+	border-left: 1px solid;
+	border-right: 1px solid;
 }
