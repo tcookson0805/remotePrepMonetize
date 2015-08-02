@@ -41,14 +41,10 @@
 					<div class="picture"></div>
 				</div>
 				<div class="col-md-8">
-					<div class="name">
-						
-					</div>
-					<div class="category"></div>
-					<div class="price"></div>
-					<div class="selling_point">
-						
-					</div>
+					<div class="name"></div>
+					<div>Category: <span class="category"></span></div>
+					<div>Price: $<span class="price"></span></div>
+					<div>Description: <span class="selling_point"></span></div>
 				</div>
 			</div>
 		</div>
@@ -64,11 +60,10 @@
 					<div class="name">
 						
 					</div>
-					<div class="category"></div>
-					<div class="price"></div>
-					<div class="selling_point">
-						
-					</div>
+					<div>Category: <span class="category"></span></div>
+					<div>Price: $<span class="price"></span></div>
+					<div>Description: <span class="selling_point"></span></div>
+					
 				</div>
 			</div>
 		</div>
@@ -84,11 +79,10 @@
 					<div class="name">
 						
 					</div>
-					<div class="category"></div>
-					<div class="price"></div>
-					<div class="selling_point">
+					<div>Category: <span class="category"></span></div>
+					<div>Price: $<span class="price"></span></div>
+					<div>Description: <span class="selling_point"></span></div>
 						
-					</div>
 				</div>
 			</div>
 		</div>
@@ -104,11 +98,10 @@
 					<div class="name">
 						
 					</div>
-					<div class="category"></div>
-					<div class="price"></div>
-					<div class="selling_point">
+					<div>Category: <span class="category"></span></div>
+					<div>Price: $<span class="price"></span></div>
+					<div>Description: <span class="selling_point"></span></div>
 						
-					</div>
 				</div>
 			</div>
 		</div>
@@ -144,40 +137,66 @@
 <script src="jquery-2.1.4.min.js"></script>
 
 <script>
+
+	var something = "something"
+
 	var book1 = {
 		name: "Head First JavaScript Programming",
 		category: "Computers & Technology",
-		price: 35.70,
-		picture url: "img/HeadFirst.jpg" ,
-		selling_point: ["This brain-friendly guide teaches you everything from JavaScript language fundamentals to advanced topics, including objects, functions, and the document object model." , "You will not just be reading but you will be playing games, solving puzzles, pondering mysteries, and interacting with JavaScript in ways you never imagined."] 
-
+		price: 35.99,
+		picture: "<img src = img/headfirst.jpg>",
+		selling_point: ["This brain-friendly guide teaches you everything from JavaScript language fundamentals to advanced topics, including objects, functions, and the document object model." , "<p>You will not just be reading but you will be playing games, solving puzzles, pondering mysteries, and interacting with JavaScript in ways you never imagined.</p>"] 
 	};
+
+	$('#book1 .name').text(book1.name);
+	$('#book1 .category').text(book1.category);
+	$('#book1 .price').text(book1.price);
+	$('#book1 .picture').html(book1.picture);
+	$('#book1 .selling_point').html(book1.selling_point);
+
+
 
 	var book2 = {
 		name: "JavaScript & JQuery: Interactive Front-End Web Development",
 		category: "Computers & Technology",
 		price: 29.99,
-		picture url: "img/JsAndJQ.jpg" ,
-		selling_point: ["Basic programming concepts - assuming no prior knowledge of programming beyond an ability to create a web page using HTML & CSS.", "Core elements of the JavaScript language - so you can learn how to write your own scripts.",  "jQuery - which will allow you to simplify the process of writing scripts (this is introduced half-way through the book once you have a solid understanding of JavaScript).", "How to recreate techniques you will have seen on other web sites such as sliders, content filters, form validation, updating content using Ajax, and much more."]		
+		picture: "<img src= img/JsAndJQ.jpg>" ,
+		selling_point: ["You will learn: ", "<li> Basic programming concepts - assuming no prior knowledge of programming beyond an ability to create a web page using HTML & CSS.</li>", "<li>Core elements of the JavaScript language - so you can learn how to write your own scripts.</li>",  "<li>jQuery - which will allow you to simplify the process of writing scripts (this is introduced half-way through the book once you have a solid understanding of JavaScript).</li>", "<li>How to recreate techniques you will have seen on other web sites such as sliders, content filters, form validation, updating content using Ajax, and much more.</li>"]		
 	};
+
+	$('#book2 .name').text(book2.name);
+	$('#book2 .category').text(book2.category);
+	$('#book2 .price').text(book2.price);
+	$('#book2 .picture').html(book2.picture);
+	$('#book2 .selling_point').html(book2.selling_point);
 
 	var album1 = {
 		name: "LOVE SONGS DRUG SONGS - The X Ambassadors",
 		category: "Alt Rock",
 		price: 7.99,
-		picture url: " ",
-		selling_point: ["Description: ", "Tracks: " , "Unconsolable", "Love Songs Drug Songs" , "Down With Me", "Stranger", "Litost", "Brother"]
+		picture: "<img src=img/loveSongsdrugSongs.jpg>",
+		selling_point: ["<br>Tracks: " , "<li>Unconsolable</li>", "<li>Love Songs Drug Songs</li>" , "<li>Down With Me</li>", "<li>Stranger</li>", "<li>Litost</li>", "<li>Brother</li>"]
 	};
+
+	$('#album1 .name').text(album1.name);
+	$('#album1 .category').text(album1.category);
+	$('#album1 .price').text(album1.price);
+	$('#album1 .picture').html(album1.picture);
+	$('#album1 .selling_point').html(album1.selling_point);
 
 	var album2 = {
 		name: "TALKING IS HARD - Walk the Moon",
 		category: "Indie Rock",
 		price: 14.99,
-		picture url: "img/talkingishard.png",
-		selling_point: ["Description: ", "Tracks: ", "Different Colors" , "Sidekick" , "Shut Up and Dance". "Up 2 U" , "Avalanche" , "Portugal", "Down in the Dumps", "Work this Body", "Spend Your $$$", "We Are the Kids", "Come Under the Covers", "Aquaman", "Boyfriend", "This Must Be The Place (Naive Melody)"]
+		picture: "<img src=img/talkingishard.png>",
+		selling_point: ["<br>Tracks: ", "<li>Different Colors</li>" , "<li>Sidekick</li>", "<li>Shut Up and Dance</li>", "<li>Up 2 U</li>" , "<li>Avalanche</li>" , "<li>Portugal</li>", "<li>Down in the Dumps</li>", "<li>Work this Body</li>", "<li>Spend Your $$$</li>", "<li>We Are the Kids</li>", "<li>Come Under the Covers</li>", "<li>Aquaman</li>", "<li>Boyfriend</li>", "<li>This Must Be The Place</li>"]
 	};
 
-
+	$('#album2 .name').text(album2.name);
+	$('#album2 .category').text(album2.category);
+	$('#album2 .price').text(album2.price);
+	$('#album2 .picture').html(album2.picture);
+	$('#album2 .selling_point').html(album2.selling_point);
 
 </script>
 
